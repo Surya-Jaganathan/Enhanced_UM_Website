@@ -1,0 +1,28 @@
+{
+  "manuals": [
+    {
+      "slug": "getting-started",
+      "title": "Getting started",
+      "category": "Getting started",
+      "description": "Set up your product and learn the essentials in a few easy steps.",
+      "updated": "2026-10-13",
+      "featured": true,
+      "access": "public",
+      "file": "getting-started.md"
+    },
+    {
+      "slug": "troubleshooting",
+      "title": "Troubleshooting guide",
+      "category": "Troubleshooting",
+      "description": "Diagnose common issues and follow recommended recovery steps.",
+      "updated": "2026-10-13",
+      "featured": true,
+      "access": "public",
+      "file": "troubleshooting.md"
+    }
+  ],
+  "faqFiles": ["general-faqs.json"],
+  "settings": {
+    "supportEmail": "support@example.com"
+  }
+}
