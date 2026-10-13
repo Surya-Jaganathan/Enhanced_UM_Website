@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Admin — DocsHub</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="admin-body">
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">D</span><span>DocsHub</span><span class="admin-tag">ADMIN</span></a><nav class="nav"><a href="index.html">View customer page ↗</a><button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">◐</button></nav><button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">☰</button></header>
+<main class="admin-wrap">
+<section id="login-view" class="login-shell">
+  <div class="login-brand"><span class="brand-mark large">D</span><p class="eyebrow blue">DOCSHUB ADMINISTRATION</p><h1>Welcome back</h1><p class="muted">Sign in to manage manuals and FAQs.</p></div>
+  <form id="login-form" class="panel login-panel">
+    <div id="login-error" class="alert alert-error" role="alert" hidden></div>
+    <label class="field"><span>Username</span><input id="username" name="username" autocomplete="username" required placeholder="Enter username"></label>
+    <label class="field"><span>Password</span><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter password"></label>
+    <button class="btn btn-primary btn-block" type="submit">Sign in <span>→</span></button>
+    <p class="login-note">Demo credentials are configured in this static prototype.</p>
+  </form>
+  <a class="back-link" href="index.html">← Back to customer help center</a>
+</section>
+
+<section id="dashboard-view" hidden>
+  <div class="dashboard-heading"><div><p class="eyebrow blue">CONTENT MANAGEMENT</p><h1>Admin dashboard</h1><p class="muted">Manage the manuals and FAQs shown on the customer page.</p></div><button id="logout-btn" class="btn">Sign out</button></div>
+  <div class="alert alert-warning"><strong>Static-site limitation:</strong> changes are saved in this browser only. To publish changes for every visitor on GitHub Pages, commit the matching data to the repository (instructions in README.md). Do not put a GitHub token or private credentials in browser code.</div>
+  <div class="stat-grid"><div class="stat-card"><span>Manual links</span><strong id="manual-stat">0</strong></div><div class="stat-card"><span>FAQs</span><strong id="faq-stat">0</strong></div><div class="stat-card"><span>Last saved</span><strong id="saved-stat" class="stat-small">—</strong></div></div>
+  <div class="tabs" role="tablist"><button class="tab active" data-tab="manuals-panel" role="tab">User manuals</button><button class="tab" data-tab="faqs-panel" role="tab">FAQs</button><button class="tab" data-tab="settings-panel" role="tab">Settings & export</button></div>
+
+  <section class="panel admin-panel" id="manuals-panel">
+    <div class="panel-heading"><div><h2>Manage user manuals</h2><p class="muted">Add a public GitHub Markdown link, edit it, or remove it.</p></div><button id="add-manual-btn" class="btn btn-primary">＋ Add manual</button></div>
+    <div id="manual-form-wrap" class="form-wrap" hidden>
+      <form id="manual-form">
+        <input id="manual-id" type="hidden">
+        <div class="form-grid">
+          <label class="field"><span>Manual title *</span><input id="manual-title" required maxlength="140" placeholder="e.g. Getting Started Guide"></label>
+          <label class="field"><span>Category</span><input id="manual-category" maxlength="80" placeholder="e.g. Setup"></label>
+          <label class="field full"><span>GitHub Markdown URL *</span><input id="manual-url" type="url" required placeholder="https://raw.githubusercontent.com/owner/repo/main/path/manual.md"><small>Use a public raw.githubusercontent.com URL, or a public GitHub blob URL.</small></label>
+          <label class="field full"><span>Short description</span><textarea id="manual-description" rows="2" maxlength="300" placeholder="What will the reader learn?"></textarea></label>
+        </div>
+        <div id="manual-form-error" class="alert alert-error" role="alert" hidden></div>
+        <div class="form-actions"><button type="button" class="btn" id="cancel-manual">Cancel</button><button type="submit" class="btn btn-primary">Save manual</button></div>
+      </form>
+    </div>
+    <div id="manual-list-admin" class="managed-list"></div>
+  </section>
+
+  <section class="panel admin-panel" id="faqs-panel" hidden>
+    <div class="panel-heading"><div><h2>Manage FAQs</h2><p class="muted">Create question-and-answer entries for the customer page.</p></div><button id="add-faq-btn" class="btn btn-primary">＋ Add FAQ</button></div>
+    <div id="faq-form-wrap" class="form-wrap" hidden>
+      <form id="faq-form">
+        <input id="faq-id" type="hidden">
+        <div class="form-grid">
+          <label class="field full"><span>Question *</span><input id="faq-question" required maxlength="240" placeholder="Enter a frequently asked question"></label>
+          <label class="field full"><span>Answer *</span><textarea id="faq-answer" required rows="5" maxlength="4000" placeholder="Write the answer. Basic Markdown is supported: **bold**, lists, and links."></textarea></label>
+          <label class="field"><span>Category</span><input id="faq-category" maxlength="80" placeholder="e.g. Troubleshooting"></label>
+        </div>
+        <div id="faq-form-error" class="alert alert-error" role="alert" hidden></div>
+        <div class="form-actions"><button type="button" class="btn" id="cancel-faq">Cancel</button><button type="submit" class="btn btn-primary">Save FAQ</button></div>
+      </form>
+    </div>
+    <div id="faq-list-admin" class="managed-list"></div>
+  </section>
+
+  <section class="panel admin-panel" id="settings-panel" hidden>
+    <h2>Settings & data portability</h2><p class="muted">Export your current browser data as JSON. This is useful for copying approved content into your GitHub repository.</p>
+    <div class="settings-actions"><button id="export-btn" class="btn btn-primary">Export content JSON</button><label class="btn upload-btn">Import content JSON<input id="import-file" type="file" accept="application/json,.json" hidden></label><button id="reset-btn" class="btn btn-danger">Reset demo data</button></div>
+    <div id="settings-message" class="alert" hidden role="status"></div>
+    <div class="notice"><strong>Markdown links:</strong> only public Markdown files can be fetched by this customer website. Private GitHub repository URLs will not work without authentication, and credentials must never be embedded in this static site.</div>
+  </section>
+</section>
+</main>
+<footer class="footer admin-footer"><a class="brand" href="index.html"><span class="brand-mark">D</span><span>DocsHub</span></a><span>Admin tools · GitHub Pages prototype</span></footer>
+<script src="assets/js/shared.js" defer></script>
+<script src="assets/js/admin.js" defer></script>
+</body></html>
