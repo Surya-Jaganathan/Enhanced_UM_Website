@@ -1,0 +1,22 @@
+{
+  "quickLinks": [
+    {
+      "title": "Contact support",
+      "description": "Get help from the support team.",
+      "url": "mailto:support@example.com",
+      "icon": "✉"
+    },
+    {
+      "title": "Product website",
+      "description": "Explore product details and updates.",
+      "url": "https://example.com",
+      "icon": "↗"
+    },
+    {
+      "title": "Release notes",
+      "description": "Review recent changes and improvements.",
+      "url": "#manuals",
+      "icon": "↻"
+    }
+  ]
+}
