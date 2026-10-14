@@ -52,6 +52,12 @@
       "question": "What is CBS?",
       "answer": "A Core Banking Solution (CBS) is a centralized software platform that allows banks to manage their primary operations—such as deposits, withdrawals, loans, and customer records—from a single shared database.",
       "category": ""
+    },
+    {
+      "id": "item-mv7pfkxw-fpurlz",
+      "question": "What is CERSAI?",
+      "answer": "CERSAI stands for the Central Registry of Securitisation Asset Reconstruction and Security Interest of India. It is a government-backed online database that records mortgages and security interests created over properties and assets.",
+      "category": ""
     }
   ],
   "quickLinks": [
