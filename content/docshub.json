@@ -48,7 +48,14 @@
       "category": ""
     }
   ],
-  "quickLinks": [],
+  "quickLinks": [
+    {
+      "id": "item-mv7o7o6w-40lwxm",
+      "title": "Chat GPT",
+      "url": "https://chatgpt.com/",
+      "description": ""
+    }
+  ],
   "settings": {
     "supportEmail": "support@example.com"
   }
