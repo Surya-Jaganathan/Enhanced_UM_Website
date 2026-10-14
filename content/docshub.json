@@ -1,12 +1,49 @@
 {
   "manuals": [
-    {"id":"sample-getting-started","title":"Getting started","category":"Getting started","description":"Learn the essentials and find your way around the product.","url":"","markdown":"# Getting started\n\nWelcome to the DocsHub user manual.\n\n## Before you begin\n\n- Review the product requirements.\n- Keep the product details nearby.","updated":"2026-10-13"},
-    {"id":"sample-troubleshooting","title":"Troubleshooting guide","category":"Troubleshooting","description":"Check common issues and recommended next steps.","url":"","markdown":"# Troubleshooting guide\n\n## Before contacting support\n\n1. Record the exact error message.\n2. Note the product and version.\n3. List the steps you have already tried.","updated":"2026-10-13"}
+    {
+      "id": "sample-getting-started",
+      "title": "Getting started",
+      "category": "Getting started",
+      "description": "Learn the essentials and find your way around the product.",
+      "url": "",
+      "markdown": "# Getting started\n\nWelcome to the DocsHub user manual.\n\n## Before you begin\n\n- Review the product requirements.\n- Keep the product details nearby.",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "sample-troubleshooting",
+      "title": "Troubleshooting guide",
+      "category": "Troubleshooting",
+      "description": "Check common issues and recommended next steps.",
+      "url": "",
+      "markdown": "# Troubleshooting guide\n\n## Before contacting support\n\n1. Record the exact error message.\n2. Note the product and version.\n3. List the steps you have already tried.",
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "item-mv7n1phn-nig0iz",
+      "title": "PMV UM",
+      "category": "",
+      "description": "",
+      "url": "https://raw.githubusercontent.com/Surya-Jaganathan/PSB-PMV-scheme-user-manual/refs/heads/main/README.md",
+      "markdown": "",
+      "updated": "2026-10-14"
+    }
   ],
   "faqs": [
-    {"id":"sample-faq-1","question":"Where can I find the latest user manual?","answer":"Browse the User manuals section above. The latest approved guide should be linked there.","category":"Documentation"},
-    {"id":"sample-faq-2","question":"How do I report a problem?","answer":"Include the product name, version, exact error message, and steps to reproduce the issue.","category":"Support"}
+    {
+      "id": "sample-faq-1",
+      "question": "Where can I find the latest user manual?",
+      "answer": "Browse the User manuals section above. The latest approved guide should be linked there.",
+      "category": "Documentation"
+    },
+    {
+      "id": "sample-faq-2",
+      "question": "How do I report a problem?",
+      "answer": "Include the product name, version, exact error message, and steps to reproduce the issue.",
+      "category": "Support"
+    }
   ],
   "quickLinks": [],
-  "settings": {"supportEmail":"support@example.com"}
+  "settings": {
+    "supportEmail": "support@example.com"
+  }
 }
