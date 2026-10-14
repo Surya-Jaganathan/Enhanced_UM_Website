@@ -40,6 +40,12 @@
       "question": "How do I report a problem?",
       "answer": "Include the product name, version, exact error message, and steps to reproduce the issue.",
       "category": "Support"
+    },
+    {
+      "id": "item-mv7nk88r-06jif2",
+      "question": "What is ETB and NTB?",
+      "answer": "ETB stands for **Existing to Bank** and NTB stands for **New to Bank**.",
+      "category": ""
     }
   ],
   "quickLinks": [],
