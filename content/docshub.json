@@ -46,6 +46,12 @@
       "question": "What is ETB and NTB?",
       "answer": "ETB stands for **Existing to Bank** and NTB stands for **New to Bank**.",
       "category": ""
+    },
+    {
+      "id": "item-mv7p87tv-jvqdqz",
+      "question": "What is CBS?",
+      "answer": "A Core Banking Solution (CBS) is a centralized software platform that allows banks to manage their primary operations—such as deposits, withdrawals, loans, and customer records—from a single shared database.",
+      "category": ""
     }
   ],
   "quickLinks": [
